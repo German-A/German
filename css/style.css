@@ -1,0 +1,185 @@
+p
+{
+    padding: 7px 30px 10px 30px;
+    font-size: 1.07em;
+    color: rgb(150, 150, 145);
+}
+p.oc{
+    padding: 7px 30px 10px 30px;
+    font-size: 0.55em;
+    color: rgb(37, 37, 37);
+}
+b{
+    padding-block: 35px;
+}
+/* ul{
+    padding: 7px 30px 10px 60px;
+    font-size: 1.07em;
+    color: rgb(150, 150, 145);
+    
+} */
+
+ul {
+    list-style: none;
+    padding: 7px 30px 10px 55px;
+    font-size: 1.07em;
+    color: rgb(150, 150, 145);
+    text-align: justify;
+    }
+    
+ul li.cor::before {
+content: "\2600";  
+display: inline-block; 
+padding-right: 7px;
+font-size: 20px;
+line-height: 25px;
+}
+ul li.gr::before {
+    content: "\1F921";  
+    display: inline-block; 
+    padding-right: 7px;
+    font-size: 20px;
+    line-height: 25px;
+    }
+ul li.gn::before {
+    content: "\01F9E0";  
+    display: inline-block; 
+    padding-right: 7px;
+    font-size: 20px;
+    line-height: 25px;
+    }
+.text-j{
+    text-align: justify;
+}
+h1
+{
+    text-align: center;
+    padding: 20px;
+    color: beige;
+}
+h2
+{
+    text-align: center;
+    padding: 20px;
+    color: beige;
+    font: oblique bold 200% cursive;
+}
+i
+{
+    margin: 60px;
+    font-size: 1.2em; 
+    color: beige;
+}
+/* Aquí definimos las Custom properties */
+:root {
+    --negro: #393939;
+    --blanco: #ececec;
+    --sombra-ppal: #c9c9c9;
+    --sombra-sec: #ffffff;
+    --borde-negro: #00000050;
+    --marcado: rgb(127, 195, 255);
+    
+    --tipo-principal: Helvetica, Arial, sans-serif;
+  }
+  /* Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+      --negro: #ececec;
+      --blanco: #06858a;
+      --sombra-ppal: #09615d;
+      --sombra-sec: #09615d;
+      --borde-negro: #03454e50;
+    }
+  }
+  /* Configuramos si un usuario ha activado el modo alto contraste. (BETA) */
+/*
+    Estilos generales para que las etiquetas no contengan propiedades
+    que nos estorben y en todos los navegadores se vean correctamente
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  li.punto {
+    list-style-type: none;
+  }
+  ::selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+  }
+  
+  form, input, textarea, select, button {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+    background-color: transparent;
+    display: block;
+  }
+  .carrousel {
+    width: 30%;
+    margin-inline: 34%;
+    max-width: 100em;
+    padding: 0.55em;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -0.15em -0.25em 1.5em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    overflow: hidden;
+  }
+  
+  .carrousel .grande {
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    padding: 0.7em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+  }
+  
+  .carrousel .img {
+    width: calc( 105% / 2 - 2em);
+    min-height: 1vh;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 0.2em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  }
+  
+  .carrousel .puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.10em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carrousel .punto {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.2em 0.2em 0;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  }
+  
+  .carrousel .punto.activo {
+    background-color: lightblue;
+  }
